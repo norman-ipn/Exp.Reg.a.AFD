@@ -1,0 +1,35 @@
+\documentclass{book}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+\title{Reporte de análisis}
+
+\begin{document}
+
+\maketitle
+
+\chapter{Análisis}
+El programa deverá convertir una Expresión Regular (E.R.) a un Autómata Finito Determinista(A.F.D.). 
+Dicha tarea se programará apegándose al algoritmo <<del Árbol>>.
+
+
+\section{El algoritmo}
+
+La entrada del algoritmo es: una expresión regular, la salida del algoritmo es: un A.F.D.
+Los pasos del algoritmo se pueden listar como:
+
+\begin{enumerate}
+\item Extender la E.R. que se va a convertir.
+\item Construir el árbol de análisis sintáctico correspondiente a la E.R.
+\item Anotar las posiciones de los símbolos que están en la E.R.
+\item Anotar en cada nodo si es anulable o no.
+\item Anotar en cada nodo las posiciones de la función primero().
+\item Anotar en cada nodo las posiciones de la función último().
+\item Llenar la tabla de las posiciones siguientes.
+\item Determintar los estados del A.F.D usando los siguientes.
+\item Marcar el estado inicial y los finales.
+\end{enumerate}
+
+
+
+\end{document}
