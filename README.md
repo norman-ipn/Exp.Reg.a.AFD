@@ -14,6 +14,17 @@ siguiendo el método que construye un árbol y calcula las funciones anulable, p
 Colaboradores
 -------------
 Rafael Norman Saucedo Delgado
+<<<<<<< HEAD
 Romero Gutierrez Miguel AngeL
+=======
 
+Luis Antonio Hernández Melgarejo
+>>>>>>> eb0b9dd89b2df6c8223d0eb659aeae34b7512ea7
 
+Erick Cruz Ubaldo
+
+Aceves Amador Omar Emmanuel
+
+Enrique Hernández Jiménez
+
+Alejandro Gonzalez Solis
