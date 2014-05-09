@@ -6,6 +6,7 @@
  * Objetivo: 
  *   es un archivo de muestra base para la práctica. 
  * 
+ *
  * */
 
 int main(void)
