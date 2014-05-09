@@ -18,7 +18,6 @@ Rafael Norman Saucedo Delgado
 Romero Gutierrez Miguel AngeL
 
 Luis Antonio Hernández Melgarejo
->>>>>>> eb0b9dd89b2df6c8223d0eb659aeae34b7512ea7
 
 Erick Cruz Ubaldo
 
