@@ -16,4 +16,4 @@ Colaboradores
 Rafael Norman Saucedo Delgado
 
 Luis Antonio Hernández Melgarejo
-
+Erick Cruz Ubaldo
