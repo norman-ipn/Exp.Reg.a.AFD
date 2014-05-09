@@ -14,6 +14,6 @@ siguiendo el método que construye un árbol y calcula las funciones anulable, p
 Colaboradores
 -------------
 Rafael Norman Saucedo Delgado
-
+Romero Gutierrez Miguel AngeL
 
 
