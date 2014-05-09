@@ -22,3 +22,5 @@ Erick Cruz Ubaldo
 Aceves Amador Omar Emmanuel
 
 Enrique Hernández Jiménez
+
+Alejandro Gonzalez Solis
