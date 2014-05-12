@@ -12,6 +12,8 @@
 	5.- Repetir el tercer punto si existe alguna hoja que sea expresión regular.
 */
 
+#include "Dato.hpp"
+
 class Arbol
 {
 /*
@@ -31,10 +33,17 @@ class Arbol
 	2.- Hoja actual sobre la que se trabaja.
 		apHoja* hojaActual
 */
-public:
-	Arbol(arguments);
-	~Arbol();
-private:
-protected:
+	private:
+		Dato d;
+		Arbol *hojaIzquierda;
+		Arbol *hojaDerecha;
+	public:
+		void insertar(Arbol, Dato);
+		void inorden(Arbol);
+
+		Arbol(arguments);
+		~Arbol();
+
+	protected:
 };
 #endif

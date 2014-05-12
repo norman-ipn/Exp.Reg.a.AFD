@@ -12,6 +12,7 @@
 	4.- Colocar el operdador de mayor precedencia en la hoja actual y separar la expresión entre sus dos hijos de acuerdo al operador.
 	5.- Repetir el tercer punto si existe alguna hoja que sea expresión regular.
 */
+#include <string>
 
 class Expresion
 {
@@ -32,6 +33,8 @@ public:
 	Expresion(arguments);
 	~Expresion();
 private:
+	std::string exp;
+
 protected:
 	/* data */
 };
