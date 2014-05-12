@@ -1,3 +1,5 @@
+#ifndef __ARBOL_HPP__
+#define __ARBOL_HPP__
 /*
 	Titulo: Algoritmo árbol de expr. regular
 	Autores: Romero Gutiérrez Miguel Angel
@@ -35,39 +37,4 @@ public:
 private:
 protected:
 };
-
-class hoja
-{
-/*
-	Metodos:
-	1.- 
-*/
-public:
-	hoja(arguments);
-	~hoja();
-
-	/* data */
-};
-
-class Exp
-{
-/*
-	Metodos:
-	1.- Buscar operador mas alto y devuelve su posición en la cadena
-		int buscaOper();
-	2.- Tomar una subcadena de la expresión regular, de una posición a otra
-		char* subcad(int posIni, int posFin)
-	3.- Metodos getter y setter.
-	Atributos
-	1.- Cadena de caracteres de la expresion regular
-		char* expresion
-	2.- Longitud de cadena
-		int largo
-*/
-public:
-	Exp(arguments);
-	~Exp();
-private:
-protected:
-	/* data */
-};
+#endif
