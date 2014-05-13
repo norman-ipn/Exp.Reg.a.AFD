@@ -17,7 +17,7 @@
 class Expresion
 {
 /*
-	Metodos:
+	Métodos:
 	1.- Buscar operador mas alto y devuelve su posición en la cadena
 		int buscaOper();
 	2.- Tomar una subcadena de la expresión regular, de una posición a otra
@@ -30,8 +30,8 @@ class Expresion
 		int largo
 */
 public:
-	Expresion(arguments);
-	~Expresion();
+	Expresion(char *expresion, unsigned int n_caracteres);
+	~Expresion(void);
 private:
 	std::string exp;
 

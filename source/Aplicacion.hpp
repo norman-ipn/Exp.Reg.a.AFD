@@ -9,6 +9,8 @@ class Aplicacion{
 	private:
 		Convertidor conver;
 	public:
+		/** Aquí inicia la ejecución de la aplicación*/
+		void iniciar(void);
 
 };
 

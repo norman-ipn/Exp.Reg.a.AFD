@@ -41,8 +41,8 @@ class Arbol
 		void insertar(Arbol, Dato);
 		void inorden(Arbol);
 
-		Arbol(arguments);
-		~Arbol();
+		Arbol(void);
+		~Arbol(void);
 
 	protected:
 };
