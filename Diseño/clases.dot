@@ -1,0 +1,27 @@
+digraph hierarchy {
+
+node[shape=record,style=filled,fillcolor=yellow,color=red]
+edge[dir=back, arrowtail=empty]
+
+
+1[label = "{Aplicacion|-Convertidor |+ iniciar(void): void}"]
+
+2[label = "{Expresion|- exp: String| ... }"]
+3[label = "{Arbol|...|...}"]
+4[label = "{Dato|...|...}"]
+5[label = "{Automata|...|...}"]
+6[label = "{Simbolo|...|...}"]
+7[label = "{Estado|...|...}"]
+8[label = "{Transicion|...|...}"]
+
+9[label = "{Convertidor|-exp:Expresion\l-arbol_sintactico: Arbol\l- afd : Automata \l|+ extender(exp:Expresion): void}"]
+
+
+
+1->2
+2->3
+3->4[constraint=false, arrowtail=odiamond]
+4->5[constraint=false, arrowtail=odiamond]
+5->6[constraint=false, arrowtail=odiamond]
+6->7[arrowtail=odiamond]
+}
