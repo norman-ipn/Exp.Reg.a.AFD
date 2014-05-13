@@ -5,8 +5,9 @@ Reporte.pdf: Reporte.tex
 view: Reporte.pdf
 	evince Reporte.pdf
 clean: 
-	rm Reporte.aux
-	rm Reporte.pdf
-	rm Reporte.log
+	rm -f Reporte.aux
+	rm -f Reporte.pdf
+	rm -f Reporte.log
+	rm -f Reporte.toc
 
 
