@@ -38,16 +38,20 @@
 
 \chapter{Análisis}
 
+Este capítulo contiene las actividades realizadas durante la etapa de análisis de la práctica 4
+del curso de compiladores, que lleva como título <<Conversión de expresiones regulares a autómatas finitos
+implementado en el algoritmo del árbol>>.
 
 \section{Objetivo}
-El programa deberá convertir una Expresión Regular (E.R.) a un Autómata Finito Determinista(A.F.D.).
-Dicha tarea se programará apegándose al algoritmo <<del Árbol>>.
-
+Crear un programa que convierta una expresión regular (E.R.) en un autómata finito determinista (A.F.D.) siguiendo
+el algoritmo de <<del Árbol>> visto en clase.
 
 \section{Requerimientos Funcionales}
+
 \begin{itemize}
-	\item El programa recibirá como entrada una expresión regular la cual será transformada en un Automata Finito Determinista.
-	\item Generará como salida una imagen del AFD.
+  \item El programa debe recibir como entrada una expresión regular.
+  \item El programa debe convertir la expresión regular en un autómata finito determinista.
+  \item El programa debe generar una imagen del autómata finito determinista.
 \end{itemize}
 
 
@@ -60,8 +64,13 @@ Dicha tarea se programará apegándose al algoritmo <<del Árbol>>.
 
 
 \section{El algoritmo}
-El programa que se realizará constará de la conversión de una Expresión Regular (E.R.) a un Autómata Finito Determinista (A.F.D.), dicha tarea se programará apegándose al algoritmo (del Árbol).
-Los pasos del algoritmo se pueden listar como:
+El algoritmo que debe de seguir el programa se conoce como el algoritmo del <<árbol>> porque 
+construye un árbol de análisis sintáctico de la expresión regular. Los pasos del algoritmo 
+son:
+
+{\bf Entrada:} $c$ la cadena de caracteres de longitud $n$, que contiene la expresión regular.
+
+{\bf Salida:} Un A.F.D. (Estados, Estado inicial, Estados finales, Alfabeto, Transiciones.) $AFD=\{E,i,F,\Sigma,\delta\}$
 \begin{enumerate}
 	\item Extender la E.R. que se va a convertir.
 	\item Construir el árbol de análisis sintáctico correspondiente a la E.R.
