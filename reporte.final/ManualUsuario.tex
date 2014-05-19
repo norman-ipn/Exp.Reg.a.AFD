@@ -1,0 +1,26 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+%opening
+\title{}
+\author{}
+
+\begin{document}
+\section{Manual de Usuario}
+\subsection{Conversor de expresión regular a autómata finito determinista}
+La terminal sera el punto de entrada para el usuario; sólo se tiene que ingresar la expresión regular 
+la cual sera transformada a un Automata Finito Determinista. El programa sólo
+reconoce símbolos individuales, es decir caracteres simples; éstos pueden ser
+ingresados uno a continuación de otro o separados por espacios.
+Luego, al costado de donde dice ER, se ingresa la expresión regular. Una
+expresión regular esta conformada por los símbolos del alfabeto y los
+operadores, estos son:
+1. La disyunción +
+2. La estrella de Kleen *
+3. Los paréntesis ( )
+Nótese que no se tiene en cuenta el operador de concatenación ya que este se omite.
+
+El resultado del proceso de conversión se puede apreciar en una tabla de
+transición de estados y posteriormente en un grafo dibujado mediante el lenguaje dot.
+
+\end{document}
