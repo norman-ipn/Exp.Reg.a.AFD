@@ -47,6 +47,18 @@ implementado en el algoritmo del árbol>>.
 Crear un programa que convierta una expresión regular (E.R.) en un autómata finito determinista (A.F.D.) siguiendo
 el algoritmo de <<del Árbol>> visto en clase.
 
+\section{Problemática}
+La conversión de una E.R. en un A.F.D. se puede realizar utilizando dos métodos:
+
+\begin{itemize}
+	\item Convertir la E.R. en un autómata finito no determinista (A.F.N.) con la ayuda de las construcciones de Thompson y, posteriormente, convertir el A.F.N. en un A.F.D. con utilizando el algoritmo de los subconjuntos.
+	\item Convertir la E.R. en un A.F.D. siguiendo el algoritmo de <<del Árbol>>
+\end{itemize}
+
+Podemos observar que el segundo método mencionado es más simple, ya que es una conversión directa y no se pasa a convertir en un A.F.N. \\
+
+Se busca automatizar este algoritmo de <<del Árbol>> para que la conversión de una E.R. a un A.F.D. sea mucho más sencilla y eficaz. De esta manera estamos resolviendo dos problemas con una solución; el primero es el hecho de que utilizando las construcciones de Thompson y el algoritmo de los subconjuntos, podremos lograr simplificar el trabajo de la conversión y, asimismo, poder tener un resultado confiable; el segundo es que podremos agilizar la conversión con el algoritmo de <<del Árbol>>, comparado con el tiempo que se necesita al utilizar el algoritmo realizando la conversión en papel, de igual forma podemos concluir que el resultado obtenido de la conversión también será confiable.
+
 \section{Requerimientos Funcionales}
 
 \begin{itemize}
