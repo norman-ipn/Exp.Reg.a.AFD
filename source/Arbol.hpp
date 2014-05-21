@@ -25,6 +25,22 @@ class Arbol{
 		void setDato(char);
 // Consulta el dato (caractér) del nodo raíz.
 		char getDato(void);
+// Coloca la posición de los símbolos que están en la expresión regular.
+		void setPosicion(int);
+// Consulta la posición del nodo.
+		int getPosicion();
+// Anota si un nodo es anulable o no.
+		void setAnulable(bool);
+// Consulta si un nodo es anulable o no.
+		bool getAnulable();
+// Coloca los nodos siguiente.
+		void setPrimeros(int);
+// Consulta los nodos siguientes.
+		int* getPrimeros();
+// Coloca los nodos últimos.
+		void setUltimos(int);
+// Consulta los nodos últimos.
+		int* getUltimos();
 };
 
 #endif

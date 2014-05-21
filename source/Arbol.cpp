@@ -79,3 +79,35 @@ void Arbol::setDato(char c){
 char Arbol::getDato(void){
 	return d.getDato();
 };
+
+void Arbol::setPosicion(int pos){
+	d.setPosicion(pos);
+};
+
+int Arbol::getPosicion(){
+	return d.getPosicion();
+};
+
+void Arbol::setAnulable(bool a){
+	d.setAnulable(a);
+};
+
+bool Arbol::getAnulable(){
+	return d.getAnulable();
+};
+
+void Arbol::setPrimeros(int prim){
+	d.setPrimeros(prim);
+};
+
+int* Arbol::getPrimeros(){
+	return d.getPrimeros();
+};
+
+void Arbol::setUltimos(int ult){
+	d.setUltimos(ult);
+};
+
+int* Arbol::getUltimos(){
+	return d.getUltimos();
+};
