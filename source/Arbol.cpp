@@ -56,7 +56,8 @@ void Arbol::inorden(Arbol *a){
 		printf("%c ",a->getDato());
 		inorden(a->hojaDerecha);
     }
-}
+};
+
 void Arbol::inorden(Arbol *a,FILE* dot){
 
 	if(a!=NULL){
@@ -69,6 +70,19 @@ void Arbol::inorden(Arbol *a,FILE* dot){
 		fprintf(dot,"\"%c\" -> ",a->getDato());
 		inorden(a->hojaDerecha,dot);
 		fprintf(dot,"\"%c\";\n",a->getDato());
+    }
+};
+
+void Arbol::inordenPosiciones(Arbol *a){
+	if(a!=NULL){
+		inordenPosiciones(a->hojaIzquierda);
+		if( a->getDato()!='+'&&a->getDato()!='*'&&
+			a->getDato()!='.'&&a->getDato()!='|'){
+			a->setPosicion(countInordenPosicion);
+			printf("%c pos: %i\n",a->getDato(),a->getPosicion());
+			countInordenPosicion++;
+		}
+		inordenPosiciones(a->hojaDerecha);
     }
 };
 

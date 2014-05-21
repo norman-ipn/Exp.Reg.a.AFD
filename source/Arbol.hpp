@@ -5,6 +5,8 @@
 
 #include "Dato.hpp"
 
+static int countInordenPosicion=1;
+
 class Arbol{
 	private:
 // Cada árbol contendrá un campo para guardar el dato y 
@@ -21,6 +23,7 @@ class Arbol{
 // (hojaIzquierda, raíz, hojaDerecha)
 		void inorden(Arbol *);
 		void inorden(Arbol *,FILE*);
+		void inordenPosiciones(Arbol *);
 // Coloca el caractér dentro del nodo raíz.
 		void setDato(char);
 // Consulta el dato (caractér) del nodo raíz.

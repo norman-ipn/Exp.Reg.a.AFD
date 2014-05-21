@@ -9,6 +9,7 @@
 #include "Automata.hpp"
 #include "Pila.hpp"
 
+
 class Convertidor{
 	private:
 		Expresion exp;
@@ -22,8 +23,8 @@ class Convertidor{
 // Construye el árbol sintáctico. Con la expresión regular previamente extendida
 // y con notación prefija.
 		void construirArbol(void);
-		
-		void calculaPosiciones(Arbol);
+// Calcula las posiciones de los simbolos de la expresión regular.	
+		void calcularPosiciones(void);
 		void calcularAnulables(Arbol);
 		void calcularPrimeros(Arbol);
 		void calcularUltimos(Arbol);

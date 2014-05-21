@@ -8,7 +8,8 @@ void Aplicacion::iniciar(int argc, char *argv[]){
 
 		c.extender();
 		c.construirArbol();
-		c.dibujarArbol();
+		//c.dibujarArbol();
+		c.calcularPosiciones();
 		
 	}else
 		std::cout << "Error de entrada."<<std::endl;
