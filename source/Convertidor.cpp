@@ -64,12 +64,16 @@ void Convertidor::calcularPosiciones(void){
 	arbolSintactico->inordenPosiciones(arbolSintactico);
 };
 
-void Convertidor::calcularAnulables(Arbol){};
-void Convertidor::calcularPrimeros(Arbol){};
-void Convertidor::calcularUltimos(Arbol){};
-void Convertidor::llenarTablaSiguientes(Arbol){};
-void Convertidor::crearAutomata(Arbol){};
-void Convertidor::marcarEstados(Arbol,Automata){};
+void Convertidor::calcularAnulables(void){
+	printf("\nNodos anulables de la Expresión regular.\n");
+	arbolSintactico->postordenAnulables(arbolSintactico);
+};
+
+void Convertidor::calcularPrimeros(void){};
+void Convertidor::calcularUltimos(void){};
+void Convertidor::llenarTablaSiguientes(void){};
+void Convertidor::crearAutomata(void){};
+void Convertidor::marcarEstados(void){};
 
 void Convertidor::dibujarArbol(void){
 	FILE *dot;

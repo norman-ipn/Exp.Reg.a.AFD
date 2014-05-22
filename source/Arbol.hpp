@@ -24,6 +24,9 @@ class Arbol{
 		void inorden(Arbol *);
 		void inorden(Arbol *,FILE*);
 		void inordenPosiciones(Arbol *);
+// Recorre el árbol sintáctico con un recorrido "postorden". 
+// (hojaIzquierda, hojaDerecha, raíz)
+		void postordenAnulables(Arbol *);
 // Coloca el caractér dentro del nodo raíz.
 		void setDato(char);
 // Consulta el dato (caractér) del nodo raíz.

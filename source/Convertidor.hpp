@@ -25,12 +25,12 @@ class Convertidor{
 		void construirArbol(void);
 // Calcula las posiciones de los simbolos de la expresión regular.	
 		void calcularPosiciones(void);
-		void calcularAnulables(Arbol);
-		void calcularPrimeros(Arbol);
-		void calcularUltimos(Arbol);
-		void llenarTablaSiguientes(Arbol);
-		void crearAutomata(Arbol);
-		void marcarEstados(Arbol,Automata);
+		void calcularAnulables(void);
+		void calcularPrimeros(void);
+		void calcularUltimos(void);
+		void llenarTablaSiguientes(void);
+		void crearAutomata(void);
+		void marcarEstados(void);
 		
 		
 // Instancia la expresión regular.

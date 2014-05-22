@@ -86,6 +86,48 @@ void Arbol::inordenPosiciones(Arbol *a){
     }
 };
 
+void Arbol::postordenAnulables(Arbol *a){
+	if(a!=NULL){
+		postordenAnulables(a->hojaIzquierda);
+		postordenAnulables(a->hojaDerecha);
+		switch(a->getDato()){
+			case '.':
+				if(a->hojaIzquierda->getAnulable()&&a->hojaDerecha->getAnulable())
+					a->setAnulable(true);
+				else
+					a->setAnulable(false);
+				break;
+				
+			case '|':
+				if(a->hojaIzquierda->getAnulable()||a->hojaDerecha->getAnulable())
+					a->setAnulable(true);
+				else
+					a->setAnulable(false);
+				break;
+				
+			case '+':
+				if(a->hojaIzquierda->getAnulable())
+					a->setAnulable(true);
+				else
+					a->setAnulable(false);
+				break;
+				
+			case '*':
+			case 'e':
+				a->setAnulable(true);
+				break;
+				
+			default:
+				a->setAnulable(false);
+				break;
+				
+		}if(a->getAnulable())
+			printf("%c Es anulable: Verdadero.\n",a->getDato());
+		else
+			printf("%c Es anulable: Falso.\n",a->getDato());
+    }
+};
+
 void Arbol::setDato(char c){
 	d.setDato(c);
 };
