@@ -154,9 +154,42 @@ void Arbol::postordenPrimeros(Arbol *a){
 				a->setPrimeros(a->getPosicion());
 				break;
 				
-		}printf("%c Primeros: ",a->getDato(),a->getPosicion());
+		}printf("%c Primeros: ",a->getDato());
 		for(i=0;a->getPrimeros()[i]!=-1;i++){
 			printf("%i ",a->getPrimeros()[i]);
+		}printf("\n");
+    }
+};
+
+void Arbol::postordenUltimos(Arbol *a){
+	int i;
+	if(a!=NULL){
+		postordenUltimos(a->hojaIzquierda);
+		postordenUltimos(a->hojaDerecha);
+		switch(a->getDato()){
+			case '.':
+				if(a->hojaDerecha->getAnulable())
+					a->setUltimos(a->hojaDerecha->getUltimos(),a->hojaIzquierda->getUltimos());
+				else
+					a->setUltimos(a->hojaDerecha->getUltimos());
+				break;
+				
+			case '|':
+					a->setUltimos(a->hojaDerecha->getUltimos(),a->hojaIzquierda->getUltimos());
+				break;
+				
+			case '+':
+			case '*':
+				a->setUltimos(a->hojaIzquierda->getUltimos());
+				break;
+				
+			default:
+				a->setUltimos(a->getPosicion());
+				break;
+				
+		}printf("%c Ultimos: ",a->getDato());
+		for(i=0;a->getUltimos()[i]!=-1;i++){
+			printf("%i ",a->getUltimos()[i]);
 		}printf("\n");
     }
 };
@@ -203,6 +236,14 @@ int* Arbol::getPrimeros(){
 
 void Arbol::setUltimos(int ult){
 	d.setUltimos(ult);
+};
+
+void Arbol::setUltimos(int *ult){
+	d.setUltimos(ult);
+};
+
+void Arbol::setUltimos(int *ult,int *ult2){
+	d.setUltimos(ult,ult2);
 };
 
 int* Arbol::getUltimos(){

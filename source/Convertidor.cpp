@@ -74,7 +74,11 @@ void Convertidor::calcularPrimeros(void){
 	arbolSintactico->postordenPrimeros(arbolSintactico);
 };
 
-void Convertidor::calcularUltimos(void){};
+void Convertidor::calcularUltimos(void){
+	printf("\nNodos ultimos de la Expresión regular.\n");
+	arbolSintactico->postordenUltimos(arbolSintactico);
+};
+
 void Convertidor::llenarTablaSiguientes(void){};
 void Convertidor::crearAutomata(void){};
 void Convertidor::marcarEstados(void){};

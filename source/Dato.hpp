@@ -11,8 +11,8 @@ class Dato{
 		char d;
 		int posicion;
 		bool anulable;
-		int primeros[];
-		int ultimos[];
+		int primeros[20];
+		int ultimos[20];
 	public:
 // Inicializa el objeto Dato.
 		Dato();
@@ -28,14 +28,16 @@ class Dato{
 		void setAnulable(bool);
 // Consulta si un nodo es anulable o no.
 		bool getAnulable();
-// Coloca los nodos siguiente.
+// Coloca los nodos primeros.
 		void setPrimeros(int);
 		void setPrimeros(int*);
 		void setPrimeros(int*,int*);
-// Consulta los nodos siguientes.
+// Consulta los nodos primeros.
 		int* getPrimeros();
 // Coloca los nodos últimos.
 		void setUltimos(int);
+		void setUltimos(int*);
+		void setUltimos(int*,int*);
 // Consulta los nodos últimos.
 		int* getUltimos();
 };

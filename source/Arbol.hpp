@@ -28,6 +28,7 @@ class Arbol{
 // (hojaIzquierda, hojaDerecha, raíz)
 		void postordenAnulables(Arbol *);
 		void postordenPrimeros(Arbol *);
+		void postordenUltimos(Arbol *);
 // Coloca el caractér dentro del nodo raíz.
 		void setDato(char);
 // Consulta el dato (caractér) del nodo raíz.
@@ -48,6 +49,8 @@ class Arbol{
 		int* getPrimeros();
 // Coloca los nodos últimos.
 		void setUltimos(int);
+		void setUltimos(int*);
+		void setUltimos(int*,int*);
 // Consulta los nodos últimos.
 		int* getUltimos();
 };

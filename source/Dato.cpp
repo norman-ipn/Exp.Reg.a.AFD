@@ -4,7 +4,7 @@ Dato::Dato(){
 	posicion=0;
 	anulable=false;
 	primeros[0]=-1;
-	ultimos[0]=0;
+	ultimos[0]=-1;
 };
 char Dato::getDato(){
 	return d;	
@@ -59,10 +59,25 @@ int* Dato::getPrimeros(){
 };
 
 void Dato::setUltimos(int ult){
+	ultimos[0]=ult;
+	ultimos[1]=-1;
+};
+void Dato::setUltimos(int *ult){
 	int i;
-	for(i=0;ultimos[i]!=0;i++);
-	ultimos[i]=ult;
-	ultimos[i+1]=0;
+	for(i=0;ult[i]!=-1;i++)
+		ultimos[i]=ult[i];
+	ultimos[i]=-1;
+};
+
+void Dato::setUltimos(int *ult, int *ult2){
+	int i,j;
+	for(i=0;ult[i]!=-1;i++)
+		ultimos[i]=ult[i];
+	ultimos[i]=-1;
+	for(j=0;ult2[j]!=-1;j++,i++){
+		ultimos[i]=ult2[j];
+		ultimos[i+1]=-1;
+	}
 };
 
 int* Dato::getUltimos(){
