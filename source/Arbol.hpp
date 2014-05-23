@@ -27,6 +27,7 @@ class Arbol{
 // Recorre el árbol sintáctico con un recorrido "postorden". 
 // (hojaIzquierda, hojaDerecha, raíz)
 		void postordenAnulables(Arbol *);
+		void postordenPrimeros(Arbol *);
 // Coloca el caractér dentro del nodo raíz.
 		void setDato(char);
 // Consulta el dato (caractér) del nodo raíz.
@@ -41,6 +42,8 @@ class Arbol{
 		bool getAnulable();
 // Coloca los nodos siguiente.
 		void setPrimeros(int);
+		void setPrimeros(int*);
+		void setPrimeros(int*,int*);
 // Consulta los nodos siguientes.
 		int* getPrimeros();
 // Coloca los nodos últimos.

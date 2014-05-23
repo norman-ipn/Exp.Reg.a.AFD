@@ -128,6 +128,39 @@ void Arbol::postordenAnulables(Arbol *a){
     }
 };
 
+void Arbol::postordenPrimeros(Arbol *a){
+	int i;
+	if(a!=NULL){
+		postordenPrimeros(a->hojaIzquierda);
+		postordenPrimeros(a->hojaDerecha);
+		switch(a->getDato()){
+			case '.':
+				if(a->hojaIzquierda->getAnulable())
+					a->setPrimeros(a->hojaIzquierda->getPrimeros(),a->hojaDerecha->getPrimeros());
+				else
+					a->setPrimeros(a->hojaIzquierda->getPrimeros());
+				break;
+				
+			case '|':
+					a->setPrimeros(a->hojaIzquierda->getPrimeros(),a->hojaDerecha->getPrimeros());
+				break;
+				
+			case '+':
+			case '*':
+				a->setPrimeros(a->hojaIzquierda->getPrimeros());
+				break;
+				
+			default:
+				a->setPrimeros(a->getPosicion());
+				break;
+				
+		}printf("%c Primeros: ",a->getDato(),a->getPosicion());
+		for(i=0;a->getPrimeros()[i]!=-1;i++){
+			printf("%i ",a->getPrimeros()[i]);
+		}printf("\n");
+    }
+};
+
 void Arbol::setDato(char c){
 	d.setDato(c);
 };
@@ -154,6 +187,14 @@ bool Arbol::getAnulable(){
 
 void Arbol::setPrimeros(int prim){
 	d.setPrimeros(prim);
+};
+
+void Arbol::setPrimeros(int *prim){
+	d.setPrimeros(prim);
+};
+
+void Arbol::setPrimeros(int *prim, int *prim2){
+	d.setPrimeros(prim, prim2);
 };
 
 int* Arbol::getPrimeros(){

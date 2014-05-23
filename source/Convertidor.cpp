@@ -69,7 +69,11 @@ void Convertidor::calcularAnulables(void){
 	arbolSintactico->postordenAnulables(arbolSintactico);
 };
 
-void Convertidor::calcularPrimeros(void){};
+void Convertidor::calcularPrimeros(void){
+	printf("\nNodos primeros de la Expresión regular.\n");
+	arbolSintactico->postordenPrimeros(arbolSintactico);
+};
+
 void Convertidor::calcularUltimos(void){};
 void Convertidor::llenarTablaSiguientes(void){};
 void Convertidor::crearAutomata(void){};

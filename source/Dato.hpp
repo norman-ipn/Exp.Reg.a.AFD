@@ -30,6 +30,8 @@ class Dato{
 		bool getAnulable();
 // Coloca los nodos siguiente.
 		void setPrimeros(int);
+		void setPrimeros(int*);
+		void setPrimeros(int*,int*);
 // Consulta los nodos siguientes.
 		int* getPrimeros();
 // Coloca los nodos últimos.
