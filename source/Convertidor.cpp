@@ -59,6 +59,26 @@ void Convertidor::construirArbol(void){
 	printf("\n");
 };
 
+void Convertidor::calcularPosiciones(void){
+	printf("\nPosiciones de los simbolos de la Expresión regular.\n");
+	arbolSintactico->inordenPosiciones(arbolSintactico);
+};
+
+void Convertidor::calcularAnulables(void){
+	printf("\nNodos anulables de la Expresión regular.\n");
+	arbolSintactico->postordenAnulables(arbolSintactico);
+};
+
+void Convertidor::calcularPrimeros(void){
+	printf("\nNodos primeros de la Expresión regular.\n");
+	arbolSintactico->postordenPrimeros(arbolSintactico);
+};
+
+void Convertidor::calcularUltimos(void){};
+void Convertidor::llenarTablaSiguientes(void){};
+void Convertidor::crearAutomata(void){};
+void Convertidor::marcarEstados(void){};
+
 void Convertidor::dibujarArbol(void){
 	FILE *dot;
 	dot = fopen ( "arbolSintactico.dot", "w" );
