@@ -1,0 +1,51 @@
+
+** Prueba unitaria
+
+Se introduce la expresión regular ( a* b+ | c )	
+
+Se introduce esta expresión regular donde su principal objetivo es comprobar que el sistema está realizando las cuatro
+operaciones que debe de realizar.
+
+** Prueba de integración
+
+Introducir una expresión donde apliquen las 4 operaciones que el sistema debe de realizar por ejemplo (a* b+ | c) 
+y  crear la imagen del autómata resultante.	
+
+El objetivo es detectar que la integración de los módulos de operación está funcionando de manera adecuada y que el
+módulo de la creación de imagen está funcionando correctamente.
+
+** Prueba funcional
+
+El Tester introducirá las siguientes expresiones regulares en el sistema, creando su respectiva imagen.
+1)	a*
+2)	a+
+3)	a|b
+4)	a.b
+5)	(a|b)*
+6)	(a|b)+
+7)	( (a|b) | (c|d) )
+8)	(a*|b+|c|d.e.f)	
+
+El objetivo es verificar que el sistema está funcionando de la manera adecuada y que está creando correctamente
+las operaciones que debe de realizar el sistema.
+
+** Prueba del sistema
+
+El sistema se ejecuta en las siguientes distribuciones de Linux:
+Ubuntu
+RedHat
+Fedora
+Debian
+OpenSuSe
+Kubuntu
+Mandriva	
+
+El objetivo de esta prueba es detectar el funcionamiento del sistema en las distintas distribuciones de Linux.
+
+** Prueba de aceptación
+
+El cliente deberá de ejecutar las Expresiones Regulares que desee.
+
+El objetivo es que cliente quede conforme de lo que el sistema le está devolviendo como resultado en las 
+operaciones/expresiones que desee obtener.
+
