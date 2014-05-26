@@ -39,4 +39,8 @@ Transicion.o: Transicion.cpp
 main.o: main.cpp
 			g++ -c main.cpp
 
-clean :rm -rf *o main
+afd:
+	dot -Tpng automata.dot > automata.png
+	eog automata.png
+
+clean:rm -rf *o main
