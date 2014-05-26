@@ -5,6 +5,8 @@ class Estado{
     private:
 	int idEstado;
     public:
+    	int getIdEstado();
+    	void setIdEstado(int);
 
 };
 
