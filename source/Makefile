@@ -8,16 +8,16 @@ Aplicacion.o:Aplicacion.cpp
 
 Arbol.o:Arbol.cpp
 			g++ -c Arbol.cpp	
-			
+
 Automata.o:Automata.cpp
 			g++ -c Automata.cpp
-
+			
 Convertidor.o:Convertidor.cpp
 			g++ -c Convertidor.cpp	
 
 Dato.o:Dato.cpp
-			g++ -c Dato.cpp	
-			
+			g++ -c Dato.cpp
+
 Estado.o:Estado.cpp
 			g++ -c Estado.cpp
 
@@ -31,16 +31,12 @@ Pila.o:Pila.cpp
 			g++ -c Pila.cpp	
 			
 Simbolo.o:Simbolo.cpp
-			g++ -c Simbolo.cpp
+			g++ -c Simbolo.cpp	
 			
-Transicion.o: Transicion.cpp
-			g++ -c Transicion.cpp
+Transicion.o:Transicion.cpp
+			g++ -c Transicion.cpp	
 			
 main.o: main.cpp
 			g++ -c main.cpp
 
-afd:
-	dot -Tpng automata.dot > automata.png
-	eog automata.png
-
-clean:rm -rf *o main
+clean :rm -rf *o main

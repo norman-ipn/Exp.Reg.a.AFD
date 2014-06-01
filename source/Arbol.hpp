@@ -6,6 +6,7 @@
 #include "Dato.hpp"
 
 static int countInordenPosicion=1;
+static int countInordenId=1;
 
 class Arbol{
 	private:
@@ -22,13 +23,19 @@ class Arbol{
 // Recorre el árbol sintáctico con un recorrido "inorden". 
 // (hojaIzquierda, raíz, hojaDerecha)
 		void inorden(Arbol *);
-		void inorden(Arbol *,FILE*);
 		void inordenPosiciones(Arbol *);
 // Recorre el árbol sintáctico con un recorrido "postorden". 
 // (hojaIzquierda, hojaDerecha, raíz)
 		void postordenAnulables(Arbol *);
 		void postordenPrimeros(Arbol *);
 		void postordenUltimos(Arbol *);
+// Se llena el archivo DOT con los datos del arbol sintáctico
+		void setLabelDOTArbol(Arbol*,FILE*);
+		void dibujarArbol(Arbol *,FILE*);
+// Coloca el id del nodo.
+		void setId(int);
+// Consulta el id del nodo.
+		int getId(void);
 // Coloca el caractér dentro del nodo raíz.
 		void setDato(char);
 // Consulta el dato (caractér) del nodo raíz.

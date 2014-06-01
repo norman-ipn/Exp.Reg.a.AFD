@@ -8,6 +8,7 @@ class Dato{
 // Se guardará el caractér de interés del árbol sintáctico,
 // la posición de los símbolos, si es anulable o no,
 // y una lista para los nodos primeros y últimos.
+		int id;
 		char d;
 		int posicion;
 		bool anulable;
@@ -16,8 +17,12 @@ class Dato{
 	public:
 // Inicializa el objeto Dato.
 		Dato();
+// Coloca el id del nodo.
+		void setId(int);
+// Consulta el id del nodo.
+		int getId(void);
 // Consulta el dato.
-		char getDato();
+		char getDato(void);
 // Almacena el valor del caractér.
 		void setDato(char);
 // Coloca la posición de los símbolos que están en la expresión regular.
