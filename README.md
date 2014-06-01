@@ -39,8 +39,7 @@ Esteban Alberto Torres Rodríguez
 
 Rudy Sanciprián Lucero
 
-<<<<<<< HEAD
 Torres Sebastian Manuel Alejandro
-=======
+
 Figueroa Urbina Eryk Alberto
->>>>>>> e55ebece1ebbd86ff94fbf5f5c35636daf61ca5c
+
