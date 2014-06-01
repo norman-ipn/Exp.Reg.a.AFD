@@ -8,7 +8,7 @@ void Aplicacion::iniciar(int argc, char *argv[]){
 
 		c.extender();
 		c.construirArbol();
-		//c.dibujarArbol();
+		c.dibujarArbol();
 		c.calcularPosiciones();
 		c.calcularAnulables();
 		c.calcularPrimeros();

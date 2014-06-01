@@ -58,21 +58,6 @@ void Arbol::inorden(Arbol *a){
     }
 };
 
-void Arbol::inorden(Arbol *a,FILE* dot){
-
-	if(a!=NULL){
-//		fprintf(dot,"\"%c\" -> \"%c\";\n",a->getDato(),a->hojaIzquierda->getDato());
-//		fprintf(dot,"\"%c\" -> \"%c\";\n",a->getDato(),a->hojaDerecha->getDato());
-// 		fprintf(dot,"\"%c\" -> ;\n",a->getDato());
-		fprintf(dot,"\"%c\" -> ",a->getDato());
-		inorden(a->hojaIzquierda,dot);
-		fprintf(dot,"\"%c\";\n",a->getDato());
-		fprintf(dot,"\"%c\" -> ",a->getDato());
-		inorden(a->hojaDerecha,dot);
-		fprintf(dot,"\"%c\";\n",a->getDato());
-    }
-};
-
 void Arbol::inordenPosiciones(Arbol *a){
 	if(a!=NULL){
 		inordenPosiciones(a->hojaIzquierda);
@@ -192,6 +177,47 @@ void Arbol::postordenUltimos(Arbol *a){
 			printf("%i ",a->getUltimos()[i]);
 		}printf("\n");
     }
+};
+
+void Arbol::setLabelDOTArbol(Arbol *a,FILE* dot){
+
+	if(a!=NULL){
+		setLabelDOTArbol(a->hojaIzquierda,dot);
+		setLabelDOTArbol(a->hojaDerecha,dot);
+		a->setId(countInordenId);
+		fprintf(dot,"%i [label=\"%c\"];\n",a->getId(),a->getDato());
+		countInordenId++;
+    }
+};
+
+void Arbol::dibujarArbol(Arbol *a,FILE* dot){
+
+	if(a!=NULL){
+		dibujarArbol(a->hojaIzquierda,dot);
+		dibujarArbol(a->hojaDerecha,dot);
+		switch(a->getDato()){
+			case '.':
+			case '|':
+				fprintf(dot,"%i -- %i\n",a->getId(),a->hojaIzquierda->getId());
+				fprintf(dot,"%i -- %i\n",a->getId(),a->hojaDerecha->getId());
+				break;
+			case '+':
+			case '*':
+				fprintf(dot,"%i -- %i\n",a->getId(),a->hojaIzquierda->getId());
+				break;
+			default:
+				break;
+				
+		}
+    }
+};
+
+void Arbol::setId(int i){
+	d.setId(i);
+};
+
+int Arbol::getId(void){
+	return d.getId();
 };
 
 void Arbol::setDato(char c){

@@ -86,12 +86,14 @@ void Convertidor::marcarEstados(void){};
 void Convertidor::dibujarArbol(void){
 	FILE *dot;
 	dot = fopen ( "arbolSintactico.dot", "w" );
-	fprintf(dot,"digraph Arbol_sintactico {\n");
-	arbolSintactico->inorden(arbolSintactico,dot);
+	fprintf(dot,"graph Arbol_sintactico {\n");
+	arbolSintactico->setLabelDOTArbol(arbolSintactico,dot);
+	arbolSintactico->dibujarArbol(arbolSintactico,dot);
 	fprintf(dot,"}");
 	fclose ( dot );
-	system("dot -Tjpg -O  afn.dot");
-	system("ristretto afn.dot.jpg");
+	printf("\nÁrbol sintáctico dibujado.\n");
+	system("dot -Tjpg -O  arbolSintactico.dot");
+	system("ristretto arbolSintactico.dot.jpg");
 	return;
 };
 

@@ -6,12 +6,21 @@ Dato::Dato(){
 	primeros[0]=-1;
 	ultimos[0]=-1;
 };
-char Dato::getDato(){
-	return d;	
+
+void Dato::setId(int i){
+	id=i;
+};
+
+int Dato::getId(void){
+	return id;
 };
 
 void Dato::setDato(char c){
 	d=c;
+};
+
+char Dato::getDato(){
+	return d;	
 };
 
 void Dato::setPosicion(int pos){
