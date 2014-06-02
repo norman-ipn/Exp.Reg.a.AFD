@@ -1,0 +1,9 @@
+MODELO DE PRUEBAS PARA PRUEBAS DEL SISTEMA
+
+Palabras clave: Pruebas del sistema, modelos de prueba, generación de pruebas. 
+
+Resumen. Uno de los objetivos de la fase de pruebas del sistema es verificar que el comportamiento externo del sistema software satisface los requisitos establecidos por los clientes y futuros usuarios del mismo. A medida que aumenta la complejidad del software y aumenta la demanda de calidad, se hacen necesarios procesos y métodos que permitan obtener buenos conjuntos de pruebas del sistema. 
+
+1. INTRODUCCIÓN 
+La fase de pruebas del sistema tiene como objetivo verificar el sistema software para comprobar si este cumple sus requisitos. Dentro de esta fase pueden desarrollarse varios tipos distintos de pruebas en función de los objetivos de las mismas. Algunos tipos son pruebas funcionales, pruebas de usabilidad, pruebas de rendimiento, pruebas de seguridad, etc. Este documento se centra en pruebas funcionales de aplicaciones sin interfaz gráfica –MODO CONSOLA-. Estas pruebas verifican que el software ofrece a los actores humanos la funcionalidad recogida en su especificación. 
+
