@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc}
 
 \title{Reporte Final: Práctica 4.}
-\author{---Autores----}
+\author{\bf Torres Sebastian Manuel Alejandro}
 
 \begin{document}
 
@@ -12,14 +12,72 @@
 
 \chapter{Introducción}
 
-Presentación del reporte final.
+Este documento contiene el desarrollo de la practica 4: de una expresión regular a un autómata finito determinista por medio del algoritmo del árbol. La práctica se dividio en 5 modulos: análisis, diseño, desarrollo y pruebas; cada una de estas secciones contiene la investigación e implementación necesario para el buen desarrollo de la practica.
 
 \section{Marco teórico}
 
-REsumen de los conceptos teóricos.
+{\bf Expresión regular:} Es una secuencia de caracteres que forma un patrón de búsqueda, principalmente utilizada para la búsqueda de patrones de cadenas de caracteres u operaciones de sustituciones. Dado un alfabeto Σ, las expresiones regulares sobre Σ se definen de forma recursiva por las siguientes reglas:
+
+\begin{itemize}
+	\item Las siguientes expresiones son expresiones regulares primitivas:
+\begin{enumerate}
+		\item ∅
+		\item λ
+		\item a, siendo a∈Σ
+\end{enumerate} 
+
+	\item Sean α y β expresiones regulares, entonces son expresiones
+regulares derivadas:
+\begin{enumerate}
+		\item α+β (Unión).
+		\item α.β (Concatenación)
+		\item α* (Cierre)
+		\item (α)
+\end{enumerate}
+
+	\item No hay más expresiones regulares sobre Σ que las construidas mediante estas reglas.
+\end{itemize}
+
+{\bf Autómata finito determinista:} Es aquel que sólo puede estar en un único estado después de leer cualquier secuencia de entradas. El termino "determinista" hace referencia al hecho de que para cada entrada sólo existe uno y sólo un estado al que el autómata puede hacer la transición a partir de su estado actual. Un autoamata determinista consta de:
+
+\begin{itemize}
+	\item Un conjunto finito de estados, a menudo designado como Q.
+	\item Un conjunto finito de símbolos de entrada, a menudo designado como ∑.
+	\item Una función de transición que toma como argumentos un estado y un símbolo de entrada y devuelve un estado. La función de transición se designa habitualmente como Δ.
+	\item Un estado inicial, uno de los estados Q.
+	\item Un conjunto de estados finales o de aceptación F. El conjunto F es un  subconjunto de Q.
+\end{itemize}
+
+{\bf Algoritmo del arbol:} se le llama así por que construye un árbol de análisis sintáctico de la expresión regular. Los pasos del algoritmo son:
+
+\begin{itemize}
+	\item Entrada: c la cadena de caracteres de longitud n, que contiene la expresión regular.
+	\item Salida: Un A.F.D. (Estados, Estado inicial, Estados finales, Alfabeto, Transiciones.) $AFD=\{E,i,F,\Sigma,\delta\}$
+\begin{enumerate}
+		\item Extender la E.R. que se va a convertir.
+		\item Construir el árbol de análisis sintáctico correspondiente a la E.R.
+		\item Anotar las posiciones de los símbolos que están en la E.R.
+		\item Anotar en cada nodo si es anulable o no.
+		\item Anotar en cada nodo las posiciones de la función primero().
+		\item Anotar en cada nodo las posiciones de la función último().
+		\item Llenar la tabla de las posiciones siguientes.
+		\item Determintar los estados del A.F.D usando los siguientes.
+		\item Marcar el estado inicial y los finales.
+\end{enumerate}
+\end{itemize}
 
 \section{Objetivos}
-Los objetivos, generales y particulares de la práctica.
+
+{\bf Objetivos Generales:} Programa que desde una expresión regular, obtenga y dibuje un autómata finito determinista por medio del algoritmo del árbol.
+
+{\bf Objetivos Particulares:} La práctica 4 esta compuesta de los siguientes modulos:
+
+\begin{itemize}
+	\item Análisis. El análisis consta de los requisitos funcionales y no funcionales del proyecto, y una explicación y breve y concisa del funcionamiento del algoritmo del árbol.
+	\item Diseño. Consta del documento con los diagramas de clases y de secuencias con el cual se programara el codigo del programa.
+	\item Desarrollo. Implementación del diseño.
+	\item Pruebas. Documento con el que se cuenta la plantilla e implementación de la guia de pruebas de las clases con el programa.
+\end{itemize}
 
 \section{Metodología}
 
