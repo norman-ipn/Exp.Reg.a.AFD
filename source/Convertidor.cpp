@@ -101,3 +101,6 @@ void Convertidor::dibujarArbol(void){
 void Convertidor::setExpresion(char *e){
 	exp.concatenar(e);
 };
+
+void Convertidor::dibujarAutomata(void){
+};

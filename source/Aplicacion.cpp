@@ -16,6 +16,7 @@ void Aplicacion::iniciar(int argc, char *argv[]){
 		c.llenarTablaSiguientes();
 		c.crearAutomata();
 		c.marcarEstados();
+		c.dibujarAutomata();
 		
 	}else
 		std::cout << "Error de entrada."<<std::endl;

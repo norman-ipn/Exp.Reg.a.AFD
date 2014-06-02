@@ -37,6 +37,9 @@ class Convertidor{
 		void setExpresion(char*);
 // Grafíca el árbol sintáctico. Creando un archivo con extensión ".dot".
 		void dibujarArbol(void);
+// Grafíca del automata. Creando un archivo con extensión ".dot".
+		void dibujarAutomata(void);
+
 };
 
 #endif
